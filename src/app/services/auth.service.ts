@@ -24,6 +24,10 @@ export class AuthService {
     )
   }
 
+  register(user: IAuth): Observable<void> {
+    return this.httpClient.post<void>(urls.auth.register, user)
+  }
+
   refresh(): Observable<ITokens> {
     return this.httpClient.post<ITokens>(urls.auth.refresh, this.getRefreshToken()).pipe(
       tap(tokens => {

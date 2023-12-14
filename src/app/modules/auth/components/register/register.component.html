@@ -1,0 +1,32 @@
+<form [formGroup]="form">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+    <div class="error">
+      <mat-error *ngIf="error">User has already exist</mat-error>
+    </div>
+    <mat-card-content>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>username</mat-label>
+          <input matInput placeholder="Username" formControlName="username">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>password</mat-label>
+          <input matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+      </div>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="register()">Register</button>
+    </mat-card-actions>
+
+  </mat-card>
+</form>

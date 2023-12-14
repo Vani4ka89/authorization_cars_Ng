@@ -12,6 +12,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {ReactiveFormsModule} from "@angular/forms";
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     LoginPageComponent,
     RegisterPageComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     CommonModule,
