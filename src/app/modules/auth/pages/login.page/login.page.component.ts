@@ -10,6 +10,7 @@ import {LoginComponent} from "../../components/login/login.component";
 export class LoginPageComponent {
 
   constructor(private matDialog: MatDialog) {
+
     this.matDialog.open(LoginComponent, {
       disableClose: true,
       hasBackdrop: false,

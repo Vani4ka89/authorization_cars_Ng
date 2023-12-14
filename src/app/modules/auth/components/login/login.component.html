@@ -3,7 +3,9 @@
     <mat-card-header>
       <mat-card-title>Login</mat-card-title>
     </mat-card-header>
-    <mat-error *ngIf="error">Wrong username or password</mat-error>
+    <div class="error">
+      <mat-error *ngIf="error">Wrong username or password</mat-error>
+    </div>
     <mat-card-content>
 
       <div>
@@ -19,6 +21,7 @@
           <input matInput placeholder="Password" formControlName="password">
         </mat-form-field>
       </div>
+
 
     </mat-card-content>
 

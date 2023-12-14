@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable, tap} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 import {IAuth, ITokens} from "../interfaces";
-import {HttpClient} from "@angular/common/http";
 import {urls} from "../constants";
 
 @Injectable({
@@ -48,9 +48,9 @@ export class AuthService {
     this.authUserSubject.next(user)
   }
 
-  private _setTokens({accessToken, refreshToken}: ITokens): void {
-    localStorage.setItem(this.accessTokenKey, accessToken);
-    localStorage.setItem(this.refreshTokenKey, refreshToken);
+  private _setTokens({access, refresh}: ITokens): void {
+    localStorage.setItem(this.accessTokenKey, access);
+    localStorage.setItem(this.refreshTokenKey, refresh);
   }
 
   getAccessToken(): string {
