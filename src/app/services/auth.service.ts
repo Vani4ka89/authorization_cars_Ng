@@ -65,4 +65,9 @@ export class AuthService {
     return localStorage.getItem(this.refreshTokenKey);
   }
 
+  deleteTokens(): void {
+    localStorage.removeItem(this.accessTokenKey);
+    localStorage.removeItem(this.refreshTokenKey);
+  }
+
 }
